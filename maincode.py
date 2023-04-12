@@ -8,6 +8,39 @@ now = datetime.now()
 
 
 
+
+
+
+
+
+
+        print(f"=== Interface: {interface_name} ===")
+        if str(address.family) == 'AddressFamily.AF_INET':
+            print(f"  IP Address: {address.address}")
+            print(f"  Netmask: {address.netmask}")
+            print(f"  Broadcast IP: {address.broadcast}")
+        elif str(address.family) == 'AddressFamily.AF_PACKET':
+            print(f"  MAC Address: {address.address}")
+            print(f"  Netmask: {address.netmask}")
+            print(f"  Broadcast MAC: {address.broadcast}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 dt_string = now.strftime("%H_%M_%S")
 print("date and time =", dt_string)
 dt_string=dt_string+".txt"
